@@ -1,59 +1,43 @@
 import styled from "styled-components"
 
+import backgroundImg from '../../assets/sign-in.svg';
+
 export const Container = styled.div`
-    width: 100vw;
-    height: 100vh;
-
-    display:  flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #f3f3f3;
-`
-
-export const Content = styled.form`
-    width: 380px;
+  height: 100vh;
 
     display: flex;
+    align-items: stretch;
+`
+
+export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    width: 100%;
+    max-width: 700px;
 
-    flex-direction:  column;
-
-
-    h1 {
+    form {
         margin-bottom: 80px;
-        font-size: 48px;
-    }
+        width: 340px;
+        text-align: center;
 
-    input {
-        width: 100%;
-        border: 0;
-        border-radius: 8px;
-        padding: 16px;
 
-        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        & + input {
-            margin-top: 8px;
+        flex-direction:  column;
+
+
+        h1 {
+            margin-bottom: 80px;
+            font-size: 48px;
         }
-    }
-
-    button {
-        width:  100%;
-        height: 52px;
-        border: 0;
-        border-radius: 8px;
-        background: #002;
-        color: #fff;
-        font-size: x-large;
-
-        margin-top: 32px;
-
-        transition: filter 0.2s;
-
-        &:hover {
-            filter: brightness(0.8)
-        }
-    }
+}
 `
+export const Background = styled.div`
+    flex: 1;
+    background: url(${backgroundImg}) no-repeat center;
+` 

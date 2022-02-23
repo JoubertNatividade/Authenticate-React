@@ -3,13 +3,18 @@ import { useNavigate } from "react-router-dom";
 import { api } from "../services/api";
 
 interface IContext {
-    user: object;
+    user: User;
     authenticate: (email: string, password: string) => Promise<void>
     logout: () => void
 }
 
+interface User {
+    id: string;
+    name: string;
+    email: string;
+}
 interface IAuthState {
-    user: object;
+    user: User;
     token: string
 }
 

@@ -16,19 +16,31 @@ export const Content = styled.div`
     align-items: center;
     justify-content: center;
 
+    flex-direction: column;
+
     h1 {
         font-size: 48px;
+        padding: 16px;
+        border-bottom: 3px solid #000;
+    }
+
+    h2 {
+        margin-top: 32px;
     }
 
     button {
-        background: #c80000;
+        display: flex;
+        align-items: center;
+        background: transparent;
         border: 0;
         position: absolute;
+        font-size: 18px;
 
-        top: 16px;   
+        top: 32px;   
         
-        border-radius: 8px;
-        padding: 8px;
+        p {
+            margin-left: 16px;
+        }
     }
 
 `

@@ -1,6 +1,8 @@
 import { ChangeEvent, useState } from "react";
+import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
 import { useAuth } from "../../contexts";
-import { Container, Content } from "./styles";
+import { Container, Content, Background } from "./styles";
 
 
 export const SignIn = () => {
@@ -30,32 +32,40 @@ export const SignIn = () => {
     return (
 
         <Container>
-            <Content
-                onSubmit={handleSubmit}
-            >
+            <Content>
+                <form
+                    onSubmit={handleSubmit}
+                >
 
-                <h1>Faça seu login</h1>
+                    <h1>Faça seu login</h1>
 
-                <input
-                    type="email"
-                    placeholder="Digite seu E-mail"
-                    value={email}
-                    onChange={handleEmail}
-                    required
-                />
-
-
-                <input
-                    type="password"
-                    placeholder="Digite sua Senha"
-                    value={password}
-                    onChange={handlePassword}
-                    required
-                />
+                    <Input
+                        name="email"
+                        type="email"
+                        placeholder="Digite seu E-mail"
+                        value={email}
+                        onChange={handleEmail}
+                        required
+                    />
 
 
-                <button type="submit">Entar</button>
+                    <Input
+                        name="password"
+                        type="password"
+                        placeholder="Digite sua Senha"
+                        value={password}
+                        onChange={handlePassword}
+                        required
+                    />
+
+
+                    <Button>Entrar</Button>
+                </form>
             </Content>
+
+            <Background />
+
+
         </ Container >
     )
 }
